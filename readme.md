@@ -1,3 +1,4 @@
 # Convert Case
 
-![case](https://raw.githubusercontent.com/victorze/case-converter/master/img.png)
+![case](https://raw.githubusercontent.com/victorze/case-converter/master/case.png)
+
