@@ -23,7 +23,6 @@ btnCapitalized.addEventListener('click', () => {
 
 copy.addEventListener('click', () => {
     document.querySelector('textarea').select();
-    //textarea.select();
     document.execCommand('copy');
 });
 
