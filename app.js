@@ -1,5 +1,6 @@
 const btnUpper = document.getElementById('upper');
 const btnLower = document.getElementById('lower');
+const btnCapitalized = document.getElementById('capitalized');
 const copy = document.getElementById('copy');
 
 btnUpper.addEventListener('click', () => {
@@ -14,8 +15,25 @@ btnLower.addEventListener('click', () => {
     textarea.value = text.toLowerCase();
 });
 
-copy.addEventListener('click', () => {
+btnCapitalized.addEventListener('click', () => {
     const textarea = document.querySelector('textarea')
-    textarea.select();
+    let text = textarea.value;
+    textarea.value = capitalLetter(text);
+});
+
+copy.addEventListener('click', () => {
+    document.querySelector('textarea').select();
+    //textarea.select();
     document.execCommand('copy');
 });
+
+function capitalLetter(str) {
+    str = str.split(" ");
+
+    for (let i = 0, x = str.length; i < x; i++) {
+        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    }
+
+    return str.join(" ");
+}
+
