@@ -18,7 +18,7 @@ btnLower.addEventListener('click', () => {
 btnCapitalized.addEventListener('click', () => {
     const textarea = document.querySelector('textarea')
     let text = textarea.value;
-    textarea.value = capitalLetter(text);
+    textarea.value = capitalLetter(text.trim());
 });
 
 copy.addEventListener('click', () => {
